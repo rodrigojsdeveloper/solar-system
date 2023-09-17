@@ -52,3 +52,8 @@ export interface ILink {
   href: string;
   name: string;
 }
+
+export interface IDescription {
+  title: string;
+  description: string;
+}

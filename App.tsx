@@ -14,8 +14,8 @@ export default function App() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Dashboard" component={Dashboard} />
+        <Stack.Screen name="Home" component={Dashboard} />
+        <Stack.Screen name="Dashboard" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
