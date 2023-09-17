@@ -1,7 +1,9 @@
 import { ImageBackground, StyleSheet, View, Text, Image } from "react-native";
+import { Navigation } from "./src/components/Navigation";
 import Svg, { Path } from "react-native-svg";
 
 export default function App() {
+  console.log("a");
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -16,8 +18,8 @@ export default function App() {
           Discover the main planets in the Solar System
         </Text>
       </View>
+      <Navigation />
 
-      {/* <Image style={styles.image} source={require("./assets/arrowRight.svg")} /> */}
       <Svg style={styles.image} width={50} height={50} viewBox="0 0 24 24">
         <Path
           fill="none"
