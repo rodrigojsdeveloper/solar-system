@@ -1,11 +1,17 @@
+import { useNavigation } from "@react-navigation/native";
 import { ILink } from "../../interfaces";
 import { styles } from "./style";
 
-const Link = ({ href, name }: ILink) => {
+const Link = ({ name }: ILink) => {
+  const navigation = useNavigation();
+
   return (
-    <a style={styles.container} href={href}>
+    <p
+      style={styles.container}
+      onClick={() => navigation.navigate("Home", { id: name })}
+    >
       {name}
-    </a>
+    </p>
   );
 };
 

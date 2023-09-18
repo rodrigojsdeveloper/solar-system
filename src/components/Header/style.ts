@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     height: 120,
     paddingLeft: 20,
     paddingTop: 20,
+    marginBottom: 50,
   },
   content: {
     width: "100%",

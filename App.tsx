@@ -16,7 +16,11 @@ export default function App() {
             headerShown: false,
           }}
         >
-          <Stack.Screen name="Home" component={Dashboard} />
+          <Stack.Screen
+            name="Home"
+            component={Dashboard}
+            initialParams={{ id: "Earth" }}
+          />
           <Stack.Screen name="Dashboard" component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
