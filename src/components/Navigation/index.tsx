@@ -1,19 +1,11 @@
-import { useEffect, useState } from "react";
-import { IPlanet } from "../../interfaces";
-import { api } from "../../services/api";
+import { PlanetContext } from "../../contexts/planets.context";
 import { View } from "react-native";
+import { useContext } from "react";
 import { styles } from "./style";
 import { Link } from "../Link";
 
 const Navigation = () => {
-  const [planets, setPlanets] = useState<Array<IPlanet>>([]);
-
-  useEffect(() => {
-    api
-      .get("/bodies")
-      .then((res) => setPlanets(res.data.bodies))
-      .catch((error) => console.error(error));
-  }, []);
+  const { planets } = useContext(PlanetContext);
 
   return (
     <View style={styles.container}>

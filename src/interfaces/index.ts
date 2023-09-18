@@ -1,4 +1,4 @@
-export interface IPlanet {
+export interface IPlanetProps {
   id: string;
   name: string;
   englishName: string;
@@ -54,6 +54,13 @@ export interface ILink {
 }
 
 export interface IDescription {
-  title: string;
-  description: string;
+  title?: string;
+}
+
+export interface IChildren {
+  children: React.ReactNode;
+}
+
+export interface ITPlanetContextData {
+  planets: Array<IPlanetProps>;
 }
